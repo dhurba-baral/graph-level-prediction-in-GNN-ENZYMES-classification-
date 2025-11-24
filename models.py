@@ -52,9 +52,7 @@ class GCN_2Layer(nn.Module):
         return x
 
 # Graph Attention Network model
-class GAT_Model(nn.Module):
-    """Graph Attention Network model"""
-    
+class GAT_Model(nn.Module):    
     def __init__(self, num_features, hidden_channels, num_classes, heads=4, dropout=0.5):
         super(GAT_Model, self).__init__()
         self.conv1 = GATConv(num_features, hidden_channels, heads=heads, dropout=dropout)
