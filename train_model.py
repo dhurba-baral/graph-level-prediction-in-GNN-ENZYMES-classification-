@@ -9,6 +9,7 @@ from data_loaders import train_loader, val_loader, num_features, num_classes
 #reproducibility
 torch.manual_seed(42)
 
+
 # Set device
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 print(f"\nUsing device: {device}")
