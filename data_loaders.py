@@ -1,15 +1,17 @@
 from dataset import ENZYMESDataset
 import torch
+import numpy as np
 from torch_geometric.loader import DataLoader
 from sklearn.model_selection import train_test_split
 
-#reproducibility
+# Set random seed for reproducibility
 torch.manual_seed(42)
+np.random.seed(42)
 
 BATCH_SIZE = 32
 
 #initialize dataset
-DATA_ROOT = '/content/drive/MyDrive/Masters study/UC/Semester/I/Deep Learning/hw_iii/ENZYMES'
+DATA_ROOT = '/data'
 dataset = ENZYMESDataset(root=DATA_ROOT)
 
 num_samples = len(dataset)
